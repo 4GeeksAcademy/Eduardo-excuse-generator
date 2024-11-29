@@ -22,9 +22,17 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  let excuse =
+  let excusa =
     aleatorio(who) + aleatorio(action) + aleatorio(what) + aleatorio(when);
 
-  let elementExcuse = window.document.querySelector("#excuse");
-  elementExcuse.innerHTML = excuse;
+  let elementExcuse = document.querySelector("#excuse");
+  elementExcuse.innerHTML = excusa;
+
+  let excuseButton = document.querySelector("#generate-excuse");
+
+  excuseButton.addEventListener("click", () => {
+    let nuevaExcusa =
+      aleatorio(who) + aleatorio(action) + aleatorio(what) + aleatorio(when);
+    elementExcuse.innerHTML = nuevaExcusa;
+  });
 };
